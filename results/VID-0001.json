@@ -6,7 +6,7 @@
   "aspectRatio": "9:16",
   "resolution": "720p",
   "retry": 3,
-  "finishedAt": "2026-10-06T13:51:29.264Z",
+  "finishedAt": "2026-10-06T19:55:41.082Z",
   "artifact": "results/VID-0001.mp4",
   "engine": "veo-3.1-generate-preview"
 }
