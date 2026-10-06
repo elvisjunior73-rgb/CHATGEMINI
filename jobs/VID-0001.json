@@ -4,5 +4,6 @@
   "status": "TODO",
   "prompt": "Clean cinematic abstract animation representing an AI bridge connecting ChatGPT, GitHub and Gemini, no logos, no text.",
   "aspectRatio": "9:16",
-  "resolution": "720p"
+  "resolution": "720p",
+  "retry": 2
 }
