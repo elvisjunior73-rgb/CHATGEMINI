@@ -1,0 +1,35 @@
+name: CHATGEMINI Video Worker
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "jobs/*.json"
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install worker dependency
+        run: npm install --no-save @google/genai
+      - name: Execute queued video jobs
+        env:
+          GEMINI_API_KEY: ${{ secrets.MANIANGA }}
+          VEO_MODEL: veo-3.1-generate-preview
+        run: node worker/veo-worker.mjs
+      - name: Commit status and generated artifacts
+        if: always()
+        run: |
+          git config user.name "nelvis-worker"
+          git config user.email "nelvis-worker@users.noreply.github.com"
+          git add results/ || true
+          if git diff --cached --quiet; then
+            echo "No worker output to commit."
+          else
+            git commit -m "worker: update video job results"
+            git push
+          fi
