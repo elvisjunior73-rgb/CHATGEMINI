@@ -1,13 +1,12 @@
 {
   "id": "VID-TEST-NELVISLABO-001",
   "type": "VIDEO",
-  "status": "DONE",
+  "status": "ERROR",
   "prompt": "Cinematic premium advertising shot of a modern NELVISLABO medical diagnostics collection center in Brazzaville, Republic of the Congo. Clean contemporary African healthcare environment, professional laboratory staff in white coats, patient welcomed at reception, subtle NELVISLABO branding, medical sample collection workflow, realistic lighting, trustworthy premium corporate aesthetic, smooth camera movement, no presenter speaking, no subtitles.",
   "aspectRatio": "9:16",
   "resolution": "720p",
   "createdAt": "2026-10-06T19:54:22.935Z",
   "source": "ChatGPT direct test",
-  "finishedAt": "2026-10-06T19:56:42.988Z",
-  "artifact": "results/VID-TEST-NELVISLABO-001.mp4",
-  "engine": "veo-3.1-generate-preview"
+  "finishedAt": "2026-10-06T20:10:53.076Z",
+  "error": "{\"error\":{\"code\":429,\"message\":\"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \",\"status\":\"RESOURCE_EXHAUSTED\"}}"
 }
