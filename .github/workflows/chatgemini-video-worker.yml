@@ -18,7 +18,7 @@ jobs:
         run: npm install --no-save @google/genai
       - name: Execute queued video jobs
         env:
-          GEMINI_API_KEY: ${{ secrets.MANIANGA }}
+          GEMINI_API_KEY: ${{ secrets.CHATGEMINI }}
           VEO_MODEL: veo-3.1-generate-preview
         run: node worker/veo-worker.mjs
       - name: Commit status and generated artifacts
